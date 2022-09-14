@@ -77,3 +77,7 @@ int main()
 ## Примеры
 
 - [пример 1](examples/constructors/ex1.cpp)
+
+## Ссылки
+
+- [BestProg](https://www.bestprog.net/ru/2018/04/02/c-class-constructor-features-of-use-constructors-in-the-classes-the-default-constructor-parameterized-constructors-examples-of-classes-that-contain-constructors_ru)
