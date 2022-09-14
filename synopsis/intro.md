@@ -10,5 +10,5 @@
 
 ## examples
 
-- [example 1](examples/ex1.cpp)
-- [example 2](examples/ex2.cpp)
+- [example 1](examples/intro/ex1.cpp)
+- [example 2](examples/intro/ex2.cpp)
