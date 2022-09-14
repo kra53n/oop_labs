@@ -26,7 +26,7 @@ class MyClass
 public:
     MyClass()
     {
-	cout << "Hello world;
+	cout << "Hello world";
     }
 }
 
@@ -64,7 +64,7 @@ int main()
 `~` - деструктор.
 
 У каждого класса может быть только 1 диструктор. Он вызывается при уничтожении
-объекта. Вызывается при выходе из блока.
+объекта во время выхода из блока.
 
 ```cpp
     ~MyClass()
@@ -76,4 +76,4 @@ int main()
 
 ## Примеры
 
-- [пример 1](examples/constructors/ex1.py)
+- [пример 1](examples/constructors/ex1.cpp)
