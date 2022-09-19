@@ -5,4 +5,4 @@
 ## Synopsis
 
 - [intro](synopsis/intro.md)
-- [special methods](synopsis/constructors.md)
+- [special methods](synopsis/special_methods.md)
