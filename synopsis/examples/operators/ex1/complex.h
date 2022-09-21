@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 class Complex
 {
   int i, r;
@@ -13,7 +15,7 @@ public:
   Complex operator + (Complex& b);
   Complex& operator = (const Complex& c);
 
-  Complex& operator + (double b);
+  Complex operator + (double b);
   friend Complex operator + (double a, Complex& b);
 
   operator double();
