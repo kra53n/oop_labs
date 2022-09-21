@@ -6,3 +6,4 @@
 
 - [intro](synopsis/intro.md)
 - [special methods](synopsis/special_methods.md)
+- [special methods](synopsis/operators.md)
