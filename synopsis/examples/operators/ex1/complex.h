@@ -6,7 +6,7 @@ class Complex
   int* mas;
 
 public:
-  Complex ();
+  Complex();
   Complex(double r, double i);
   ~Complex();
 
