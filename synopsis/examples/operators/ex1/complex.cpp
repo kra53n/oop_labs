@@ -1,6 +1,3 @@
-#include <iostream>
-using namespace std;
-
 #include "complex.h"
 
 Complex operator + (double a, Complex& b) {
@@ -13,14 +10,14 @@ Complex operator + (double a, Complex& b) {
 Complex::Complex () {
 }
 
-Complex::Complex(double r, double i) {
-  cout << "Object was created " << r << " + i*" << i << endl;
-  mas = new int;
+Complex::Complex(double r, double i) : r(r), i(i) {
+  std::cout << "Object was created " << r << " + i*" << i << std::endl;
+  mas = new int[2];
 }
 
 Complex::~Complex() {
-  cout << "Object was destroyed" << endl;
-  delete mas;
+  std::cout << "Object was destroyed" << std::endl;
+  delete[] mas;
 }
 
 Complex Complex::operator + (Complex& b) {
@@ -36,11 +33,16 @@ Complex& Complex::operator = (const Complex& c) {
   return *this;
 }
 
-Complex& Complex::operator + (double b) {
+Complex Complex::operator + (double b) {
   Complex d;
   d.r = r + b;
   d.i = i;
   return d;
+}
+
+Complex::operator double()
+{
+	return this->r;
 }
 
 void Complex::Add(Complex& c) {

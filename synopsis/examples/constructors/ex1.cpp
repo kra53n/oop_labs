@@ -13,7 +13,7 @@ public:
   //                            |  |
   Complex(double r, double i) : r(_r), i(i)
   //                              |
-  //                            coping
+  //                           copying
   {
     cout << "Object was created " << r << " + i*" << i << endl;
     mas = new int;

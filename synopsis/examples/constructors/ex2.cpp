@@ -15,7 +15,7 @@ public:
   //                            |  |
   Complex(double r, double i) : r(_r), i(i)
   //                              |
-  //                            coping
+  //                           copying
   {
     this->r = r;
     this->i = i;
