@@ -1,35 +1,39 @@
 #include <iostream>
 using namespace std;
 
-#include "vector.h"
+#include "vec.h"
 
 int main()
 {
-    Vector v;
-    v.append(12);
-    v.append(13);
-    v.append(14);
+    vec v1;
+    v1.append(12);
+    v1.append(13);
+    v1.append(14);
 
-    v << 15 << 16;
+    v1 << 15 << 16 << 17 << 18 << 20;
 
-    for (int i = 0; i < v.get_size(); i++)
-        printf("[%d] %d\n", i, v[i]);
+    v1.print();
 
-    v.pop(2);
+    v1.pop(2);
 
-    cout << endl;
-    for (int i = 0; i < v.get_size(); i++)
-        printf("[%d] %d\n", i, v.peek(i));
+    v1.print();
+    cout << v1[0];
 
-    v.switch_odd_with_even_idxs();
+    vec v2;
+    v2 << 1 << 2 << 4 << 10;
+    v2.print();
 
-    cout << endl;
-    for (int i = 0; i < v.get_size(); i++)
-        printf("[%d] %d\n", i, v.peek(i));
+    vec v3;
+    v3 = v1 + v2;
+    v3.print();
 
-    v.sort(VECTOR_SORT_DECREMENTLY);
+    vec v4;
+    v4 << 4 << 3;
 
-    cout << endl;
-    for (int i = 0; i < v.get_size(); i++)
-        printf("[%d] %d\n", i, v.peek(i));
+    cout << v4.get_len() << endl;
+    if (v4 < v1)
+        cout << "v4 less than" << endl;
+
+    system("pause");
+
 }
