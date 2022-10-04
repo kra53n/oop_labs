@@ -11,7 +11,7 @@ Vector::Vector()
 
 Vector::~Vector()
 {
-    delete data;
+    delete[] data;
 }
 
 void Vector::fill_randomly(int size, int min, int max)
@@ -79,7 +79,7 @@ void Vector::append(int elem)
     for (int i = 0; i < size - 1; i++)
         new_data[i] = data[i];
     new_data[size-1] = elem;
-    delete data;
+    delete[] data;
     data = new_data;
 }
 
@@ -94,7 +94,7 @@ int Vector::pop(int idx = -1)
             off++;
         new_data[i] = data[i+off];
     }
-    delete data;
+    delete[] data;
     data = new_data;
 
     return elem;
@@ -114,7 +114,7 @@ void Vector::clear()
 {
     if (!data)
         return;
-    delete data;
+    delete[] data;
     size = 0;
     data = 0;
 }
