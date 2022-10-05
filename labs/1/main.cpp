@@ -9,13 +9,9 @@ int main()
     v1.append(12);
     v1.append(13);
     v1.append(14);
-
     v1 << 15 << 16 << 17 << 18 << 20;
-
     v1.print();
-
     v1.pop(2);
-
     v1.print();
     cout << v1[0];
 
@@ -33,6 +29,9 @@ int main()
     cout << v4.get_len() << endl;
     if (v4 < v1)
         cout << "v4 less than" << endl;
+
+    vec v5 = { 123, 213, 312, 312 };
+    v5.print();
 
     system("pause");
 

@@ -7,6 +7,7 @@ class vec
     int size = 0;
 public:
     vec();
+    vec(const std::initializer_list<double>& list);
     vec(const vec& v);
     ~vec();
 

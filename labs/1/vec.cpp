@@ -9,11 +9,18 @@ vec::vec()
 {
 }
 
+vec::vec(const std::initializer_list<double>& list)
+{
+    size = list.size();
+    delete[] data;
+    data = new double[size];
+    std::copy(list.begin(), list.end(), data);
+}
+
 vec::vec(const vec& v)
 {
     size = 0;
     delete[] data;
-    data = new double[v.size];
     for (int i = 0; i < v.size; i++)
         this->append(v[i]);
 }
