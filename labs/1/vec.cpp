@@ -120,7 +120,7 @@ double& vec::operator[](int idx) const
 
 bool vec::operator==(vec& v)
 {
-    return get_len() == get_len();
+    return get_len() == v.get_len();
 }
 
 bool vec::operator!=(vec& v)
@@ -203,7 +203,7 @@ vec vec::operator+(vec const& v) const
             val += peek(i);
         if (i < v.size)
             val += v[i];
-        other.append(val);
+        other << val;
     }
     return other;
 }
@@ -235,7 +235,7 @@ vec vec::operator*(vec const& v) const
             val *= peek(i);
         if (i < v.size)
             val *= v[i];
-        other.append(val);
+        other << val;
     }
     return other;
 }

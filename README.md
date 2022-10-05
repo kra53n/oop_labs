@@ -9,3 +9,7 @@
 - [operators](synopsis/operators.md)
 - [streams](synopsis/streams.md)
 - [inheritance](synopsis/inheritance.md)
+
+### Patterns
+
+- [sngleton pattern](synopsis/singleton_pattern.md)

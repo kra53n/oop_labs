@@ -111,7 +111,8 @@ p->T();
 
 ## Примеры
 
-- [пример 1](examples/constructors/ex1.cpp)
+- [пример 1](examples/special_methods/ex1.cpp)
+- [пример 2](examples/special_methods/ex2.cpp)
 
 ## Ссылки
 
