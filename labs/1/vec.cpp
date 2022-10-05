@@ -22,7 +22,7 @@ vec::vec(const vec& v)
     size = 0;
     delete[] data;
     for (int i = 0; i < v.size; i++)
-        this->append(v[i]);
+        append(v[i]);
 }
 
 vec::~vec()
