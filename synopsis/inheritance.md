@@ -2,23 +2,63 @@
 
 ## Таблица модификаторов доступа
 
-
+<table>
+<tbody><tr>
+<td rowspan="2" width="112">
+<p><span>Модификатор наследования</span></p></td>
+<td colspan="3">
+<p align="center"><span>Модификатор доступа</span></p></td></tr>
+<tr>
+<td style=" vertical-align:top;" width="112">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">public</span></p></td>
+<td style=" vertical-align:top;" width="112">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">private</span></p></td>
+<td style=" vertical-align:top;" width="112">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">protected</span></p></td></tr>
+<tr>
+<td style=" vertical-align:top;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">public</span></p></td>
+<td bgcolor="#7cfc00">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#7cfc00;">public</span></p></td>
+<td bgcolor="#ff6347">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#ff6347;">private</span></p></td>
+<td bgcolor="#4169e1">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#4169e1;">protected</span></p></td></tr>
+<tr>
+<td style=" vertical-align:top;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">private</span></p></td>
+<td bgcolor="#ff6347">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#ff6347;">private</span></p></td>
+<td bgcolor="#ff6347">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#ff6347;">private</span></p></td>
+<td bgcolor="#ff6347">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#ff6347;">private</span></p></td></tr>
+<tr>
+<td style=" vertical-align:top;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt;">protected</span></p></td>
+<td bgcolor="#4169e1">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#4169e1;">protected</span></p></td>
+<td bgcolor="#ff6347">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#ff6347;">private</span></p></td>
+<td bgcolor="#4169e1">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;" align="center"><span style=" font-size:13pt; background-color:#4169e1;">protected</span></p></td></tr></tbody></table>
 
 ## Множественное наследование
 
-Можно сделать так, чтобы класс C наследовал класс A и класс B.
+Можно сделать так, чтобы класс `C` наследовал класс `A` и класс `B`.
 
 ```cpp
 class C : public A, public B
 {
 };
-
 ```
+
+> NOTE: множественное наследование лучше не использовать.
 
 ## Абстрактный класс
 
-Абстрактный класскласс - который хотя бы один полностью виртуальны и
-не иметь определений (отсутсвтие реализации).
+Абстрактный класс - класс, который хотя бы имеет один полностью
+виртуальный метод и не имеет определений (отсутсвтие реализации).
 
 ```cpp
 class Abs
@@ -32,19 +72,17 @@ class Abs
 
 ## Интерфейс
 
-Интерфейс - абстрактный класс, в котором все методы виртуальны и не
-бует ни одного свойства.
+Интерфейс - абстрактный класс, в котором все методы виртуальны и нет
+ни одного свойства.
 
 Имена таких классов начинаются с быквы `I`.
 
-Нужны для создания формы, стандарта для каких-то стандартных
-методов. Позволят обрабатывать все объекты массив унаследованных от
-`IComparable`.
+Интерфейсы нужны для создания стандартных методов, что позволят
+обрабатывать все объекты массива, унаследованных от
+`IComparable` класса.
 
 Интерфейс - один из патте'рнов проектирования.
 
-Множественное наследование лучше не использовать.
-
 ## Примеры
 
-- [пример 1](examples/inheritance/ex1)
+- [простое наследование](examples/inheritance/ex1)
