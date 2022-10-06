@@ -15,8 +15,6 @@ class Singleton
     Singleton(const Singleton&);
 
 public:
-    Signleton();
-
     // static method dont have this
     static Singleton* getInstance()
     {
@@ -24,11 +22,36 @@ public:
 	   instance = new Singleton();
 	return instance;
     }
-}
+};
 
 int main()
 {
     Singleton* s = Singleton::getInstance();
     // recieving access to the 1 object
+}
+```
+
+## Another implementation
+
+```cpp
+class Singleton2
+{
+public:
+	static Singleton2& GetInstance()
+	{
+		static Singleton2 instance;
+		return instance;
+	}
+private:
+	Singleton2(){}
+public:
+	Singleton2(const Singleton2&) = delete;
+	Singleton2& operator=(const Singleton2&) = delete;
+};
+
+int main(int argn, char** argv)
+{
+	Singleton2& var = Singleton::GetInstance();
+	return 0;
 }
 ```
