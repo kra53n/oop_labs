@@ -2,7 +2,7 @@
 
 > NOTE: в многопоточном коде синглтоны работают плохо.
 
-## Пример
+## Пример синглтона с указателем
 
 ```cpp
 class Singleton
@@ -31,7 +31,7 @@ int main()
 }
 ```
 
-## Another implementation
+## Пример синглтона с ссылкой
 
 ```cpp
 class Singleton2
