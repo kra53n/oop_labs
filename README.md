@@ -13,7 +13,7 @@
 
 ### Patterns
 
-- [sngleton pattern](synopsis/singleton_pattern.md)
+- [singleton pattern](synopsis/singleton_pattern.md)
 
 ## Other
 
