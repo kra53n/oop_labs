@@ -31,8 +31,11 @@ int main()
         cout << "v4 less than" << endl;
 
     vec v5 = { 123, 213, 312, 312 };
+    vec v6 = { 1 ,2 , 3 };
     v5.print();
+    v5 = { 1, 2, 3 };
+    cout << endl << "-1: " << v5[-1];
 
+    cout << endl;
     system("pause");
-
 }

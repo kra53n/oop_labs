@@ -60,7 +60,7 @@ double vec::pop(int idx = -1)
 
 double& vec::peek(int idx) const
 {
-    if (idx >= size)
+    if (idx >= size || -size > idx)
         throw std::out_of_range("index > size");
     if (idx < 0)
         idx = size + idx;

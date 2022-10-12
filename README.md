@@ -9,7 +9,12 @@
 - [operators](synopsis/operators.md)
 - [streams](synopsis/streams.md)
 - [inheritance](synopsis/inheritance.md)
+- [template](synopsis/template.md)
 
 ### Patterns
 
 - [sngleton pattern](synopsis/singleton_pattern.md)
+
+## Other
+
+- [cross reference solving](https://stackoverflow.com/questions/3735321/solving-cross-referencing)
