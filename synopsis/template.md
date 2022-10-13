@@ -7,7 +7,7 @@
 
 ```cpp
 template<class T>
-void swap(T& a, t& b) {
+void swap(T& a, T& b) {
 	T c = a;
 	a = b;
 	b = c;
@@ -17,7 +17,7 @@ int main() {
 	int x = 3, y = 2;
 	swap(x, y);
 
-	MyClass a. b;
+	MyClass a, b;
 	swap(a, b);
 }
 ```
@@ -64,7 +64,7 @@ public:
 	}
 }
 
-// array.cpp
+// main.cpp
 
 int main() {
 	Array<float> arr1;
