@@ -51,7 +51,7 @@ void Figure::set_x(double x)
 
 void Figure::set_y(double y)
 {
-    this->y = x;
+    this->y = y;
 }
 
 void Figure::set_color(int color)
