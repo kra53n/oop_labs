@@ -18,8 +18,8 @@ int main() {
     while (true)
     {
         char sym = getch() - '1';
-		setbkcolor(0x000000);
-		cleardevice();
+        setbkcolor(0x000000);
+        cleardevice();
 
         for (int i = 0; i < size; i++)
         {
