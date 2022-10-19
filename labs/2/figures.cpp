@@ -188,5 +188,6 @@ void Rhomb::draw()
     poly[9] = poly[1];
 
     setcolor(color);
+    setfillpattern((char*)poly, color);
     fillpoly(5, poly);
 }

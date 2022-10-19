@@ -25,12 +25,14 @@ public:
     virtual void draw() = 0;
 };
 
+
 class Circ : public Figure
 {
 public:
     using Figure::Figure;
     void draw();
 };
+
 
 class Rect : public Figure
 {
@@ -49,6 +51,7 @@ public:
 
     void draw();
 };
+
 
 class Triangle : public Figure
 {
