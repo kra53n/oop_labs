@@ -1,26 +1,18 @@
 # Exception
 
-## Blocks:
+### Blocks
 
 - `try`
 - `catch`
 - `throw`
 
-## exception including
+### Exception including
 
 ```cpp
 #include <exception>
 ```
 
-## catch everything
-
-```cpp
-catch (...)
-{
-}
-```
-
-## exmaple
+### Exmaple
 
 ```cpp
 try
@@ -31,5 +23,13 @@ try
 catch (type name)
 {
 	// ...
+}
+```
+
+### Catch everything
+
+```cpp
+catch (...)
+{
 }
 ```
