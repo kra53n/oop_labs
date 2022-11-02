@@ -14,18 +14,18 @@ public:
 
     vec(const std::initializer_list<T>& list)
     {
-		size = list.size();
-		delete[] data;
-		data = new T[size];
-		std::copy(list.begin(), list.end(), data);
+        size = list.size();
+        delete[] data;
+        data = new T[size];
+        std::copy(list.begin(), list.end(), data);
     }
 
     vec(const vec& v)
     {
-		size = 0;
-		delete[] data;
-		for (int i = 0; i < v.size; i++)
-			append(v[i]);
+        size = 0;
+        delete[] data;
+        for (int i = 0; i < v.size; i++)
+            append(v[i]);
     }
 
     ~vec()
@@ -46,28 +46,28 @@ public:
 
     T pop(int idx)
     {
-		T* new_data = new T[--size];
-		T elem = data[idx < 0 && idx > size ? size : idx];
+        T* new_data = new T[--size];
+        T elem = data[idx < 0 && idx > size ? size : idx];
 
-		for (int i = 0, off = 0; i < size; i++)
-		{
-			if (i == idx)
-				off++;
-			new_data[i] = data[i+off];
-		}
-		delete[] data;
-		data = new_data;
+        for (int i = 0, off = 0; i < size; i++)
+        {
+            if (i == idx)
+                off++;
+            new_data[i] = data[i+off];
+        }
+        delete[] data;
+        data = new_data;
 
-		return elem;
+        return elem;
     }
 
     T& peek(int idx) const
     {
-		if (idx >= size || -size > idx)
-			throw std::out_of_range("index > size");
-		if (idx < 0)
-			idx = size + idx;
-		return data[idx];
+        if (idx >= size || -size > idx)
+            throw std::out_of_range("index > size");
+        if (idx < 0)
+            idx = size + idx;
+        return data[idx];
     }
 
     T get_size() const
@@ -85,9 +85,9 @@ public:
         //const char* type = typeid(data[0]).name();
         //if (strcmp(type, "char* __ptr64"))
         //{
-		for (int i = 0; i < get_size(); i++)
-			sum += (int)peek(i);
-		return sum;
+        for (int i = 0; i < get_size(); i++)
+            sum += (int)peek(i);
+        return sum;
         //}
 
         //for (int i = 0; i < get_size(); i++)
@@ -97,10 +97,10 @@ public:
 
     void print() const
     {
-		std::cout << std::endl;
-		for (int i = 0; i < get_size(); i++)
-			std::cout << "[" << i << "] " << this->peek(i) << std::endl;
-		std::cout << std::endl;
+        std::cout << std::endl;
+        for (int i = 0; i < get_size(); i++)
+            std::cout << "[" << i << "] " << this->peek(i) << std::endl;
+        std::cout << std::endl;
     }
 
     void clear()
@@ -114,18 +114,18 @@ public:
 
     vec const& operator=(vec const& v)
     {
-		size = 0;
-		delete[] data;
-		data = new T[v.size];
-		for (int i = 0; i < v.size; i++)
-			this->append(v[i]);
-		return *this;
+        size = 0;
+        delete[] data;
+        data = new T[v.size];
+        for (int i = 0; i < v.size; i++)
+            this->append(v[i]);
+        return *this;
     }
 
     vec& operator<<(T elem)
     {
-		append(elem);
-		return *this;
+        append(elem);
+        return *this;
     }
 
     T& operator[](int idx) const
@@ -195,22 +195,22 @@ public:
 
     friend std::ostream& operator<<(std::ostream& out, vec const& v)
     {
-		for (int i = 0; i < v.size; i++)
-			out << " " << v[i] << " ";
-		return out;
+        for (int i = 0; i < v.size; i++)
+            out << " " << v[i] << " ";
+        return out;
     }
 
     friend std::istream& operator>>(std::istream& in, vec& v)
     {
-		for (int i = 0; i < v.size; i++)
-			in >> v[i];
-		return in;
+        for (int i = 0; i < v.size; i++)
+            in >> v[i];
+        return in;
     }
 
     vec operator+(vec const& v) const
     {
-		vec other;
-		int tmp_size = size > v.size ? size : v.size;
+        vec other;
+        int tmp_size = size > v.size ? size : v.size;
         for (int i = 0; i < tmp_size; i++)
         {
             T val = 0;
@@ -220,39 +220,39 @@ public:
                 val += v[i];
             other << val;
         }
-		return other;
+        return other;
     }
 
-	friend vec operator+(vec const& v, T val)
-	{
-		vec other;
-		for (int i = 0; i < v.size; i++)
-			other << v[i] + val;
-		return other;
-	}
+    friend vec operator+(vec const& v, T val)
+    {
+        vec other;
+        for (int i = 0; i < v.size; i++)
+            other << v[i] + val;
+        return other;
+    }
 
     friend vec operator+(T val, vec const& v)
     {
-		vec other;
-		for (int i = 0; i < v.size; i++)
-			other << v[i] + val;
-		return other;
+        vec other;
+        for (int i = 0; i < v.size; i++)
+            other << v[i] + val;
+        return other;
     }
 
     vec operator*(vec const& v) const
     {
-		vec other;
-		int tmp_size = size > v.size ? size : v.size;
-		for (int i = 0; i < tmp_size; i++)
-		{
-			T val = 1;
-			if (i < size)
-				val *= peek(i);
-			if (i < v.size)
-				val *= v[i];
-			other << val;
-		}
-		return other;
+        vec other;
+        int tmp_size = size > v.size ? size : v.size;
+        for (int i = 0; i < tmp_size; i++)
+        {
+            T val = 1;
+            if (i < size)
+                val *= peek(i);
+            if (i < v.size)
+                val *= v[i];
+            other << val;
+        }
+        return other;
     }
 
     friend vec operator*(vec const& v, T val)
