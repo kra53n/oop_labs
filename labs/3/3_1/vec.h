@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <typeinfo>
 
 template <class T>
 class vec
@@ -76,9 +77,21 @@ public:
 
     T get_len() const
     {
+        if (size < 1)
+            return 0;
+
         T sum = 0;
-        for (int i = 0; i < get_size(); i++)
-            sum += peek(i) * peek(i);
+
+        //const char* type = typeid(data[0]).name();
+        //if (strcmp(type, "char* __ptr64"))
+        //{
+		for (int i = 0; i < get_size(); i++)
+			sum += (int)peek(i);
+		return sum;
+        //}
+
+        //for (int i = 0; i < get_size(); i++)
+        //    sum += peek(i) * peek(i);
         return sum;
     }
 

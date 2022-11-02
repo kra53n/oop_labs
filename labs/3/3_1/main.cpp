@@ -6,6 +6,11 @@ using namespace std;
 
 int main()
 {
+    vec<char*> v7;
+    v7 << "hello";
+    v7 << "world";
+    cout << v7;
+
     vec<int> v1;
     v1.append(12);
     v1.append(13);
@@ -40,11 +45,6 @@ int main()
     vec<float> v6 = { 1 ,2 , 3 };
     v5.print();
     cout << endl << "-1: " << v5[-1];
-
-    vec<char*> v7;
-    v7 << "hello";
-    v7 << "world";
-    cout << v7;
 
     cout << endl << endl;
     system("pause");
