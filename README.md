@@ -10,6 +10,7 @@
 - [streams](synopsis/streams.md)
 - [inheritance](synopsis/inheritance.md)
 - [template](synopsis/template.md)
+- [exception](synopsis/exception.md)
 
 ### Patterns
 
