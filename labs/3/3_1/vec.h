@@ -12,7 +12,7 @@ public:
     {
     }
 
-    vec(const std::initializer_list<T>& list)
+    vec(std::initializer_list<T> list)
     {
         size = list.size();
         delete[] data;
