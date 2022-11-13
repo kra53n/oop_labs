@@ -13,6 +13,13 @@ class Stack
 {
     StackElem<T>* head = nullptr;
 public:
+    Stack() : head(nullptr) {}
+
+    ~Stack()
+    {
+        clear();
+    }
+
     void append(T val)
     {
         StackElem<T>* elem = new StackElem<T>;
@@ -27,6 +34,11 @@ public:
         for (StackElem<T>* cur = head; cur != nullptr; cur = cur->nxt)
             size++;
         return size;
+    }
+
+    StackElem<T>* get_head()
+    {
+        return head;
     }
 
     T peek(T val)
@@ -63,11 +75,6 @@ public:
             head = head->nxt;
             delete elem;
         }
-    }
-
-    ~Stack()
-    {
-        clear();
+        head = nullptr;
     }
 };
-
