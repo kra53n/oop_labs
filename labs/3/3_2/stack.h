@@ -75,6 +75,5 @@ public:
             head = head->nxt;
             delete elem;
         }
-        head = nullptr;
     }
 };
