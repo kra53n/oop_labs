@@ -19,3 +19,4 @@
 ## Other
 
 - [cross reference solving](https://stackoverflow.com/questions/3735321/solving-cross-referencing)
+- [Game architecture](synopsis/singleton_pattern.md)
