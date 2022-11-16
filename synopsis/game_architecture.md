@@ -1,3 +1,11 @@
+# Game architecture
+
+## Scheme
+
+
+## code
+
+```cpp
 #include <iostream>
 #include <list>
 
@@ -102,3 +110,4 @@ public:
 	void SendMsg(Msg msg);
 	void Draw();
 };
+```

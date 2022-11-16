@@ -19,4 +19,4 @@
 ## Other
 
 - [cross reference solving](https://stackoverflow.com/questions/3735321/solving-cross-referencing)
-- [Game architecture](synopsis/game_arch.cpp)
+- [game architecture](synopsis/game_architecture.md)
