@@ -6,13 +6,12 @@ enum Types
 	SHOOT, DEATH
 };
 
-class Msg
+struct Msg
 {
-public:
 	int type;
 };
 
-class Sprite{};
+struct Sprite{};
 
 class Manager
 {
