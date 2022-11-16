@@ -13,37 +13,6 @@ struct Msg
 
 struct Sprite{};
 
-class Manager
-{
-private:
-	std::list<GameObject*> objects;
-	std::list<Msg*> msgs;
-public:
-	void Update(int dt)
-	{
-		for (auto x : objects)
-		{
-			x->Update(dt);
-		}
-		for (auto msg : msgs)
-		{
-			switch (msg->type)
-			{
-			case SHOOT:
-				break;
-			case DEATH:
-				break;
-			}
-			for (auto x : objects)
-			{
-				x->SendMsg(*msg);
-			}
-		}
-	}
-	void SendMsg(Msg msg);
-	void Draw();
-};
-
 class GameObject
 {
 protected:
@@ -101,4 +70,35 @@ class Catapult : public RangeU
 class Item : public DynamicObject
 {
 
+};
+
+class Manager
+{
+private:
+	std::list<GameObject*> objects;
+	std::list<Msg*> msgs;
+public:
+	void Update(int dt)
+	{
+		for (auto x : objects)
+		{
+			x->Update(dt);
+		}
+		for (auto msg : msgs)
+		{
+			switch (msg->type)
+			{
+			case SHOOT:
+				break;
+			case DEATH:
+				break;
+			}
+			for (auto x : objects)
+			{
+				x->SendMsg(*msg);
+			}
+		}
+	}
+	void SendMsg(Msg msg);
+	void Draw();
 };
