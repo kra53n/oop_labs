@@ -1,10 +1,14 @@
 # Game architecture
 
-## Scheme
+<details><summary>Scheme</summary>
+	
+![game architecture scheme](https://user-images.githubusercontent.com/59062496/202236039-e468cf3d-ff7c-4634-a28c-a892745258a8.png)
+	
+</details>
 
 
-## code
-
+<details><summary>Code</summary>
+	
 ```cpp
 #include <iostream>
 #include <list>
@@ -111,3 +115,5 @@ public:
 	void Draw();
 };
 ```
+	
+</details>
