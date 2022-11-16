@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <typeinfo>
 
 template <class T>
 class vec

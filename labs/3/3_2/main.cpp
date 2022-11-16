@@ -5,9 +5,9 @@
 int main()
 {
 	Stack<const char*> s1;
-	s1.append("Igor");
-	s1.append("Semikin");
-	s1.append("Anatolievich");
+	s1.append("keep");
+	s1.append("it");
+	s1.append("please");
 	s1.print();
 
 	Stack<int> s2;

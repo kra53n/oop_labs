@@ -2,16 +2,15 @@
 #include <iostream>
 
 template <class T>
-struct StackElem
-{
-    StackElem<T>* nxt = nullptr;
-    T val;
-};
-
-template <class T>
 class Stack
 {
-    StackElem<T>* head = nullptr;
+    struct StackElem
+    {
+        StackElem* nxt = nullptr;
+        T val;
+    };
+
+    StackElem* head = nullptr;
 public:
     Stack() : head(nullptr) {}
 
@@ -22,7 +21,7 @@ public:
 
     void append(T val)
     {
-        StackElem<T>* elem = new StackElem<T>;
+        StackElem* elem = new StackElem;
         elem->val = val;
         elem->nxt = head;
         head = elem;
@@ -31,14 +30,9 @@ public:
     void get_size()
     {
         int size = 0;
-        for (StackElem<T>* cur = head; cur != nullptr; cur = cur->nxt)
+        for (StackElem* cur = head; cur != nullptr; cur = cur->nxt)
             size++;
         return size;
-    }
-
-    StackElem<T>* get_head()
-    {
-        return head;
     }
 
     T peek(T val)
@@ -51,7 +45,7 @@ public:
         if (head == nullptr)
             return 0;
         T val = head->val;
-        StackElem<T>* elem = head;
+        StackElem* elem = head;
         head = elem->nxt;
         delete elem;
         return val;
@@ -60,7 +54,7 @@ public:
     void print()
     {
         int i = 0;
-        for (StackElem<T>* cur = head; cur != nullptr; cur = cur->nxt)
+        for (StackElem* cur = head; cur != nullptr; cur = cur->nxt)
         {
             printf("[%d] ", i++);
             std::cout << cur->val << std::endl;
@@ -71,7 +65,7 @@ public:
     {
         while (head)
         {
-            StackElem<T>* elem = head;
+            StackElem* elem = head;
             head = head->nxt;
             delete elem;
         }
