@@ -11,6 +11,7 @@
 - [inheritance](synopsis/inheritance.md)
 - [template](synopsis/template.md)
 - [exception](synopsis/exception.md)
+- [STL](synopsis/stl/README.md)
 
 ### Patterns
 
