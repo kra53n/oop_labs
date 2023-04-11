@@ -21,3 +21,4 @@
 
 - [cross reference solving](https://stackoverflow.com/questions/3735321/solving-cross-referencing)
 - [game architecture](synopsis/game_architecture.md)
+- [unified modeling language](synopsis/uml.md)
